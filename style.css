@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.datos-titulo {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 28px;
+}
+
+.franja-naranja {
+    width: 100%;
+    background: #E06506;
+    position: relative;
+}
+
+.franja-naranja::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #e06406a6;
+}
+
+.franja-naranja h3 {
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.progress {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(199, 199, 199);
+    overflow: hidden;
+    position: relative;
+}
+
+.mascara-gradient{
+    width: calc(100% + 40px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 13%, rgba(255,255,255,1) 100%); 
+    transition: 0.4s;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #A53709 0%, #BF2051 19.39%, #E5004F 40.63%, #E8462F 60.42%, #F29200 81.25%, #FCE579 100%);
+}
+
+.pasos-registracion {
+    width: 600vw;
+    height: 500px;
+    overflow: hidden !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    transition: 0.4s;
+}
+
+.content {
+    flex: none;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.content form {
+    width: 100%;
+    padding: 0 200px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.content form .input-group {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content form .input-group input {
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    outline: none;
+    font-size: 20px;
+}
+
+.content form select {
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px !important;
+    background: transparent !important;
+    border: 1px solid #000;
+    border-radius: 10px;  
+    font-size: 20px;  
+}
+
+
+.content form .input-group label {
+    padding: 0 20px;
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    font-size: 20px;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.content form .input-group input:focus + label {
+    top: -10px;
+    left: 15px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.content form .input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.content form select:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+
+
+.content button {
+    padding: 10px 40px;
+    background: #48e;
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
