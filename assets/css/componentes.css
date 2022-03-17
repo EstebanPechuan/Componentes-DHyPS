@@ -1,27 +1,329 @@
 /* === Franja Naranja === */
 
-.franja-naranja {
+.separador-naranja .separador-texto {
     width: 100%;
-    background: #E06506;
-    position: relative;
+    background: var(--color-2);
 }
 
-.franja-naranja::after {
-    content: '';
-    width: 100%;
-    height: 5px;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background: #e06406a6;
-}
-
-.franja-naranja h3 {
+.separador-naranja h3 {
     padding: 10px 0;
     text-align: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 42px;
+    font-family: var(--ff-medium);
 }
+
+.borde-naranja {
+    width: 100%;
+    height: 5px;
+    background: var(--color-2-rgba);
+    margin-top: 5px;
+}
+
+
+/* === Botones === */
+
+.btn {
+    width: 100%;
+    max-width: 200px;
+    height: 47px;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: var(--ff-bold);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-ghost-magenta {
+    color: var(--color-8);
+    border: 2px solid var(--color-8);
+}
+
+.btn-fill-magenta {
+    color: #fff;
+    border: 2px solid var(--color-8);
+    background: var(--color-8);
+}
+
+
+
+/* === Botón Card === */
+
+.card-priset {
+    width: 100%;
+    max-width: 310px;
+    height: 115px;
+    transition: 0.4s;
+}
+
+.card-priset .card-main {
+    width: 100%;
+    max-width: 310px;
+    height: 115px;
+    background: #fff;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 4px #0004;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.card-priset .card-content {
+    width: 100%;
+    height: calc(100% - 4px);
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-priset .card-content .card-content-img {
+    width: 56px;
+    aspect-ratio: 1/1;
+}
+
+.card-priset .card-content .card-content-titulo h4 {
+    font-size: 24px;
+    color: var(--color-1);
+}
+
+.card-priset .card-img-footer {
+    width: 100%;
+    height: 4px;
+}
+
+
+
+.card-priset .card-desplegable {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+.card-priset .card-desplegable p {
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    background: #f7f7f7;
+    position: relative;
+    top: -50px;
+    z-index: -1;
+
+    transition: 0.4s;
+}
+
+.card-priset.active {
+    height: auto !important;
+}
+
+.card-priset.active .card-desplegable {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-priset.active .card-desplegable p {
+    top: 0;
+}
+
+
+
+.cards-arrow {
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+}
+
+.cards-arrow img {
+    width: 29px;
+    height: 21px;
+}
+
+
+
+/* === Que ofrecemos Cards === */
+
+.card-que_ofrece {
+    box-shadow: 0 4px 4px #0004;
+    width: 100%;
+    max-width: 310px;
+    height: 65px;
+    border-radius: 8px 8px 0 0;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.card-que_ofrece .que_ofrece-content {
+    width: 100%;
+    height: calc(100% - 4px);
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-que_ofrece .que_ofrece-content .que_ofrece-content-img {
+    width: 56px;
+    aspect-ratio: 1/1;
+}
+
+.card-que_ofrece .que_ofrece-content .que_ofrece-content-titulo h4 {
+    font-size: 24px;
+    color: var(--color-1);
+}
+
+.card-que_ofrece .card-img-footer {
+    width: 100%;
+    height: 4px;
+}
+
+
+.card-que_ofrece.active {
+    background: #f6f6f6;
+    opacity: 1;
+}
+
+
+
+/* === Módulos Card === */
+
+.card-modulos {
+    width: 100%;
+    max-width: 170px;
+    min-height: 170px;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px #0004;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-modulos .modulos-img {
+    width: 42px;
+    aspect-ratio: 1/1;
+}
+
+.card-modulos .modulos-titulo {
+    text-align: center;
+}
+
+
+
+/* === Noticias === */
+
+/* Programas - Acciones */
+.programa-accion {
+    width: 100%;
+    max-width: 255px;
+}
+
+.prog-img {
+    width: 100%;
+    height: 200px;
+}
+
+.prog-texto {
+    padding: 20px 0;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prog-texto a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prog-texto a img {
+    width: 20px;
+}
+
+
+
+/* Noticias - Eventos */
+
+
+.contenedor-columns {
+    width: 100%;
+    columns: 2;
+    gap: 15px;
+}
+
+
+.noticias-eventos {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px #0004;
+    margin-bottom: 15px;
+}
+
+.noticias-eventos:nth-child(1) .noti-img {
+    height: 300px;
+}
+
+.noti-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.noti-texto {
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.noti-texto a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.noti-texto a img {
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

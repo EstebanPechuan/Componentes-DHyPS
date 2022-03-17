@@ -1,3 +1,49 @@
+/* === Que ofrecemos Cards === */
+
+const queOfrecemos = document.querySelectorAll('.card-que_ofrece')
+
+queOfrecemos.forEach(item => {
+    item.addEventListener('click', () => {
+        queOfrecemos.forEach(sacarClass => {
+            sacarClass.classList.remove('active')
+        });
+        item.classList.add('active')
+    })
+});
+
+
+/* === Botón Card === */
+
+const botonCards = document.querySelectorAll('.card-priset')
+
+botonCards.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active')
+    })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// === Progress Bar ===
+
 const stepsRegistro = document.querySelector('.pasos-registracion')
 const buttonAtras = document.querySelectorAll('.buttonAtras')
 const buttonSiguiente = document.querySelectorAll('.buttonSiguiente')
