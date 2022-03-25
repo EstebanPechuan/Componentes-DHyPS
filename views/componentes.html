@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Componentes</title>
 
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -36,6 +38,20 @@
         
             <div class="btn">
                 <a href="#c" class="btn btn-fill-magenta">Iniciar Sesión</a>
+            </div>
+
+            <div class="btn">
+                <a href="#c" class="btn disable btn-fill-magenta">Acceder</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="btn-bg-gris">
+                <a href="">Registrarse como <strong>Ciudadano</strong></a>
+            </div>
+
+            <div class="btn-bg-gris">
+                <a href="">Registrarse como<strong>Agente del Ministerio</strong></a>
             </div>
         </div>
     </div>
@@ -153,6 +169,104 @@
                 </div>
             </div>
         </div>
+
+
+
+        <div class="row flex-c-c">
+            <div class="telefonos-utiles">
+                <div class="tel-util-content">
+                    <div class="tel-util-content-titulo">
+                        <h4>Niños y niñas en riesgo</h4>
+                    </div>
+                </div>
+        
+                <div class="tel-util-img-footer">
+                    <img src="../assets/img/10-linea.png" alt="">
+                </div>
+
+                <div class="tel-util-content">
+                    <div class="tel-util-content-img">
+                        <img src="../assets/img/wsp-icon.png" alt="">
+                    </div>
+                    <div class="tel-util-content-telefonos tel-import">
+                        <h4>102</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="telefonos-utiles">
+                <div class="tel-util-content">
+                    <div class="tel-util-content-titulo">
+                        <h4>Mujer</h4>
+                    </div>
+                </div>
+        
+                <div class="tel-util-img-footer">
+                    <img src="../assets/img/10-linea.png" alt="">
+                </div>
+
+                <div class="tel-util-content">
+                    <div class="tel-util-content-img">
+                        <img src="../assets/img/wsp-icon.png" alt="">
+                    </div>
+                    <div class="tel-util-content-telefonos tel-import">
+                        <h4>144</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex-c-c">
+            <div class="telefonos-utiles">
+                <div class="tel-util-content">
+                    <div class="tel-util-content-titulo">
+                        <h4>Dirección de mujer, género y diversidad</h4>
+                    </div>
+                </div>
+        
+                <div class="tel-util-img-footer">
+                    <img src="../assets/img/10-linea.png" alt="">
+                </div>
+
+                <div class="tel-util-content">
+                    <div class="tel-grid">
+                        <div class="tel-util-content-telefonos">
+                            <img src="../assets/img/wsp-icon.png" alt="">
+                            <h4>264-486-5622</h4>
+                        </div>
+                        <div class="tel-util-content-telefonos">
+                            <img src="../assets/img/wsp-icon.png" alt="">
+                            <h4>0800-666-6351</h4>
+                        </div>
+                        <div class="tel-util-content-telefonos">
+                            <img src="../assets/img/wsp-icon.png" alt="">
+                            <h4>4222713 / 4221358</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="telefonos-utiles">
+                <div class="tel-util-content">
+                    <div class="tel-util-content-titulo">
+                        <h4>Dirección de políticas para personas mayores</h4>
+                    </div>
+                </div>
+        
+                <div class="tel-util-img-footer">
+                    <img src="../assets/img/10-linea.png" alt="">
+                </div>
+
+                <div class="tel-util-content">
+                    <div class="tel-grid">
+                        <div class="tel-util-content-telefonos">
+                            <img src="../assets/img/wsp-icon.png" alt="">
+                            <h4>264-442-2571</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <hr>
@@ -197,6 +311,122 @@
     </div>
 
     <hr>
+    
+        <!-- Componentes del FORM -->
+
+    <h2>Formulario</h2>
+
+    <div class="container">
+        
+        <div class="row">
+            <!-- Select -->
+            <div class="row flex-c-c" style="flex-wrap: wrap;">
+
+                <!-- Tipo TEXT -->
+                <input type="text" placeholder="Nombre y Apellido">
+
+                <!-- Tipo NUMBER -->
+                <input type="number" placeholder="Cuil">
+
+                <!-- Tipo EMAIL -->
+                <input type="email" placeholder="Mail">
+
+                <!-- Tipo PASSWORD / SHOW PASSWORD -->
+                <div class="password-input">
+                    <div class="pass-icons">
+                        <img src="../assets/img/show.svg" alt="" class="d-none">
+                        <img src="../assets/img/hidden.svg" alt="">
+                    </div>
+
+                    <input type="password" placeholder="Contraseña">
+                </div>
+
+                <div class="password-input">
+                    <div class="pass-icons">
+                        <img src="../assets/img/show.svg" alt="" class="d-none">
+                        <img src="../assets/img/hidden.svg" alt="">
+                    </div>
+
+                    <input type="password" placeholder="Repetir Contraseña">
+                </div>
+
+
+
+                <!-- SELECT -->
+
+                <div class="select-input">
+                    <div class="sel-icons">
+                        &#x22c1;
+                    </div>
+
+                    <div class="tap-blan"></div>
+
+                    <select name="" id="">
+                        <option value="Nacionalidad">Nacionalidad</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Bolivia">Bolivia</option>
+                    </select>
+                </div>
+                
+
+
+                <!-- DATALIST -->
+
+                <input class="input-list" list="nombre_lista" type="text" placeholder="Ingrese un valor">
+
+                <datalist class="datalista" id="nombre_lista">
+                    <option value="Argentina"></option>
+                    <option value="Brasil"></option>
+                    <option value="Paraguay"></option>
+                    <option value="Uruguay"></option>
+                    <option value="Bolivia"></option>
+                </datalist> 
+
+
+
+                <!-- Date  -->
+                <form oninput="if (fecha_nacimiento.value !== '') {result.value = fecha_nacimiento.value} else {result.value = 'Fecha de Nacimiento'}">
+                    <div class="date-input">
+                        <input id="fecha_nacimiento" type="date">
+                        <output name="result" for="fecha_nacimiento">
+                            Fecha de Nacimiento
+    
+                            <div class="date-icons">
+                                <img src="../assets/img/calendar.svg" alt="">
+                            </div>
+                        </output>    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    
+    <h2>Estado Civil</h2>
+    
+    <div class="container">
+
+        <div class="row flex-c-c">
+            <input type="text" placeholder="Estado civil">
+            <input type="text" placeholder="Grupo Familiar" onchange="cantidadFamilia(this.value)">
+        </div>
+        
+        <div class="row">
+            <div class="tabla-estado-civil">
+
+                <!-- Filas generadas automáticamente -->
+                
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
     
 
     <!-- === Noticias === -->
@@ -266,6 +496,7 @@
         
 
         <!-- Noticias - Eventos -->
+          
 
         <div class="row">
             <div class="contenedor-columns">
@@ -339,8 +570,14 @@
 
             </div>
         </div>
+
     </div>
-    
+
+
+
+
+
+
 
 
     <script src="../assets/js/main.js"></script>

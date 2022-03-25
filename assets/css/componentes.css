@@ -24,15 +24,16 @@
 /* === Botones === */
 
 .btn {
-    width: 100%;
+    width: 100% !important;
     max-width: 200px;
+    min-width: 200px;
     height: 47px;
-    display: inline-block;
+    /* display: inline-block; */
     border-radius: 8px;
     font-size: 16px;
     font-family: var(--ff-bold);
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -48,8 +49,33 @@
     background: var(--color-8);
 }
 
+.btn.disable {
+    background: #aaa !important;
+    color: #fff;
+    border: 2px solid #aaa !important;
+}
 
 
+.btn-bg-gris {
+    width: 415px;
+    height: 60px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px #0004;
+}
+
+.btn-bg-gris a {
+    width: 100%;
+    height: 100%;
+    color: var(--color-1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+ 
 /* === Botón Card === */
 
 .card-priset {
@@ -172,10 +198,6 @@
     gap: 30px;
 }
 
-.card-que_ofrece .que_ofrece-content .que_ofrece-content-img {
-    width: 56px;
-    aspect-ratio: 1/1;
-}
 
 .card-que_ofrece .que_ofrece-content .que_ofrece-content-titulo h4 {
     font-size: 24px;
@@ -193,6 +215,70 @@
     opacity: 1;
 }
 
+
+/* === Teléfonos Útiles Cards === */
+
+.telefonos-utiles {
+    width: 100%;
+    max-width: 310px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #0004;
+    cursor: pointer;
+}
+
+.telefonos-utiles .tel-util-content {
+    width: 100%;
+    height: calc(100% - 4px);
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.telefonos-utiles .tel-util-content .tel-util-content-titulo h4 {
+    font-size: 20px;
+    color: var(--color-1);
+    text-align: center;
+    font-family: var(--ff-regular);
+}
+
+.telefonos-utiles .tel-util-content .tel-util-content-telefonos.tel-import h4 {
+    font-size: 36px;
+    text-align: center;
+    font-family: var(--ff-bold);
+}
+
+.telefonos-utiles .tel-util-content .tel-util-content-telefonos {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    place-items: center start;
+    gap: 20px;
+}
+
+.telefonos-utiles .tel-util-content .tel-util-content-telefonos img {
+    width: 40px;
+    aspect-ratio: 1/1;
+}
+
+.telefonos-utiles .tel-util-content .tel-util-content-telefonos h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.telefonos-utiles .card-img-footer {
+    width: 100%;
+    height: 4px;
+}
+
+
+.tel-util-content .tel-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
 /* === Módulos Card === */
@@ -358,4 +444,243 @@
 
 .gradient {
     background: linear-gradient(90deg, #A53709 0%, #BF2051 19.39%, #E5004F 40.63%, #E8462F 60.42%, #F29200 81.25%, #FCE579 100%);
+}
+
+
+
+
+
+
+
+
+/* === FORMULARIO === */
+
+input {
+    width: 415px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 0 20px;
+    border: 2px solid #0009;
+    color: #000;
+    font-size: 16px;
+    font-family: var(--ff-medium);
+    outline: none;
+
+    display: flex;
+    align-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Number Input */
+input[type="number"],
+input[type="number"]:focus,
+input[type="number"]:hover {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Password Input */
+.password-input {
+    width: 415px;
+    height: 60px;
+    position: relative;
+}
+
+.password-input input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 0 60px 0 20px;
+    border: 2px solid #0009;
+    color: #000;
+    font-size: 16px;
+    font-family: var(--ff-medium);
+
+    display: flex;
+    align-items: center;
+}
+
+.password-input .pass-icons {
+    height: 60px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.password-input .pass-icons img {
+    height: 100%;
+}
+
+
+
+
+
+/* Estilos SELECT */
+
+.select-input {
+    width: 100%;
+    max-width: 415px;
+    height: 100%;
+    max-height: 60px;
+    position: relative;
+}
+
+.select-input .sel-icons {
+    height: 100%;
+    padding: 20px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    user-select: none;
+    transform: scaleY(0.6);
+    font-weight: bold;
+}
+
+.select-input .tap-blan {
+    height: 100%;
+    width: 15px;
+    background: #fff;
+    border: 2px solid #0009;
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    user-select: none;
+}
+
+.select-input .sel-icons img {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+select {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    background: transparent;
+    border: 2px solid #0009;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: var(--ff-medium);
+}
+
+select option {
+    display: inline-block;
+    font-family: var(--ff-medium) !important;
+    background: #fff;
+    padding: 20px 0 !important;
+}
+
+select option:nth-child(even) {
+    background: #ddd;
+}
+
+datalist {
+    font-family: var(--ff-medium) !important;
+    background: #fff;
+}
+
+
+
+/* Estilos CALENDAR */
+
+/* Number Input */
+input[type="date"]:focus {
+    opacity: 1;
+}
+
+input[type="date"] {
+    opacity: 0;
+}
+
+.date-input {
+    width: 415px;
+    height: 60px;
+    position: relative;
+    background: transparent;
+    border-radius: 8px;
+    background: transparent;
+}
+
+.date-input output {
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    background: #fff;
+    border: 2px solid #0009;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+}
+
+.date-input .date-icons {
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.date-input .date-icons img {
+    height: 100%;
+}
+
+
+
+/* Tabla Estado Civil */
+
+.tabla-estado-civil {
+    width: 100%;
+}
+
+.estCivil-row {
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: minmax(250px, 2fr) minmax(150px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    gap: 15px;
+}
+
+.estCivil-row:nth-child(1) div {
+    background: #f6f6f6;
+    padding: 15px 20px;
+    text-align: center;
+    font-family: var(--ff-bold);
+}
+
+.estCivil-row:nth-child(1) div:nth-child(1) {
+    text-align: left;
+}
+
+.estCivil-row input {
+    width: 100%;
+    height: fit-content;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #0006;
 }
